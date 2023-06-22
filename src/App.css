@@ -1,0 +1,265 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+    overflow-x: hidden;
+    position: relative;
+    /* overflow-y: clip; */
+}
+
+#img{
+  border: 1px solid #f17373;
+  margin-top: 20px;
+  padding: 10px;
+  width: 50%;
+}
+
+.timeline{
+  list-style-type: none;
+    position: relative;
+}
+
+.timeline::before {
+  content: " ";
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+  background: #dee6ed;
+  height: 100%;
+  left: 9px;
+  width: 2px;
+}
+
+.timeline-item::before {
+  background: #fff;
+  border: 3px solid #3f80ea;
+  border-radius: 50%;
+  height: 15px;
+  left: 2px;
+  width: 15px;
+  content: " ";
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+}
+
+.mantine-1gui2wx{
+  display: flex !important;
+  flex-direction: row;
+}
+
+.mantine-8k3bl3{
+  color: #5c92e9;
+}
+
+@media screen and (max-width: 768px) {
+  .mantine-13szqvi{
+    font-size:  15px;
+  }
+  .mantine-8k3bl3 {
+    display: none;
+  flex-direction: column;
+  }
+  .mantine-vgr5eq{
+    width: 50px;
+    font-size: 15px;
+  }
+  .mantine-122nsw9 button{
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+  }
+}
+
+/* custom scrollbar */
+/* width */
+::-webkit-scrollbar {
+    width: 7.5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: none;
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+    /* border-top-left-radius: 10%; */
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  .footer{
+    z-index: 1001;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-bottom: 0.0625rem solid #e9ecef;
+    padding: 1rem 2rem;
+    margin-bottom: 0px!important;
+    /* position: -webkit-sticky; */
+    position: sticky;
+    margin-top: auto;
+    bottom: 0;
+    left: 0;
+    animation-name: sideUp;
+    animation-duration: 5s;
+    animation-timing-function: ease-in;
+    animation-direction: alternate;
+  }
+
+  @keyframes sideUp {
+    from{
+      transform: translateY(200%);
+      opacity: 0;
+    }
+    to{
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+/* mantine override */
+.mantine-9ajpia:hover {
+    background-color: #162c5c;
+    color: #fff;
+    opacity: .5;
+}
+
+.mantine-gszoqu[data-with-icon]{
+  background-color: #f3f6fb;
+  border: none;
+}
+
+.mantine-g7194:hover {
+  background-color: none !important;
+}
+
+.mantine-6km1t0 {
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+}
+
+.mantine-hxz0vp{
+  height: 300px !important;
+}
+
+.mantine-1q36a81{
+  height: 200px;
+}
+
+.mantine-1emfdtu-header{
+  width: 220px;
+}
+
+.mantine-1ab4j2x-header{
+  width: 220px;
+}
+
+.mantine-yxmaw9{
+  max-width: 100%;
+} 
+
+.mantine-Modal-body table > tr{
+  height: 20px !important;
+}
+
+@media screen and (max-width: 520px) {
+  .mantine-1ld6a2e{
+    top: -20px
+  }
+}
+
+@media screen and (min-width: 820px) {
+  .mantine-1emfdtu{
+    max-width: 100%;
+    width: 100% !important;
+    margin: 0 !important;
+  }
+  .mantine-8k3bl3{
+    display: none;
+  }
+  
+  .mantine-1ab4j2x{
+    width: 100%;
+  }
+
+  .mantine-1emfdtu-header{
+    max-width: 100%;
+    width: 100% !important;
+    margin: 0 !important;
+  }
+  
+  .mantine-1ab4j2x-header{
+    width: 100%;
+  }
+}
+
+.mantine-19ohv2q.mantine-19ohv2q {
+  height: auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .mantine-13szqvi{
+    font-size:  15px;
+  }
+  .mantine-vgr5eq{
+    width: auto;
+    font-size: 15px;
+  }
+  .mantine-122nsw9 button{
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+  }
+  .mantine-8k3bl3{
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+/* side animation */
+.sideAni {
+    animation-name: side;
+    animation-duration: .5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count:initial;
+}
+
+@keyframes side {
+    from {transform: translateX(-100%);}
+  to {transform: translateX(0);}    
+}
+
+.sideRight {
+    animation-name: sideRight;
+    animation-duration: .5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count:initial;
+}
+
+@keyframes sideRight {
+    0% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+  50% {
+    opacity: .5;
+    display: block;
+    transform: translateX(-50%);
+    } 
+    100%{
+      opacity: 0;
+      display: none;
+      transform: translateX(-100%);
+      }    
+}
