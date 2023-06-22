@@ -216,7 +216,7 @@ const Messageitem = () => {
                 {" "}
                 <img
                   src="https://appstack.bootlab.io/img/avatars/avatar-3.jpg"
-                  className=" lg:w-[6%] md:w-[18%] w-[4%] h-[fit-content] rounded-full"
+                  className=" lg:w-[6%] md:w-[18%] w-[20%] h-[fit-content] rounded-full"
                   alt=""
                 />
                 <div className="flex flex-col">
@@ -230,15 +230,15 @@ const Messageitem = () => {
               </div>
 
               <div className=" flex gap-2 w-[40%] justify-end">
-                <button className=" text-white md:h-[3vh] lg:h-[5vh] sm:h-[5vh] bg-blue-500 rounded-md w-[40px] flex justify-center items-center py-1 px-2">
+                <button className="text-white md:h-[3vh] lg:h-[5vh] h-[5vh] bg-blue-500 rounded-md w-[40px] flex justify-center items-center py-1 px-2">
                   <BsTelephone />
                 </button>
 
-                <button className=" text-white h-[5vh] md:h-[3vh] lg:h-[5vh] sm:h-[5vh] bg-blue-500 rounded-md w-[40px] flex justify-center items-center py-1 px-2">
+                <button className="text-white md:h-[3vh] lg:h-[5vh] h-[5vh] bg-blue-500 rounded-md w-[40px] flex justify-center items-center py-1 px-2">
                   <HiVideoCamera />
                 </button>
 
-                <button className=" text-gray-700 h-[5vh] md:h-[3vh] lg:h-[5vh] sm:h-[5vh] bg-gray-300 rounded-md w-[40px] flex justify-center items-center py-1 px-2">
+                <button className=" text-gray-700 h-[5vh] md:h-[3vh] lg:h-[5vh] bg-gray-300 rounded-md w-[40px] flex justify-center items-center py-1 px-2">
                   ...
                 </button>
               </div>

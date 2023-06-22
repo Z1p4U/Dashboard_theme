@@ -13,7 +13,7 @@ import { BsFacebook } from "react-icons/bs";
 
 const Leftprofile = () => {
   return (
-    <div className=" md:w-[30%] w-[92%] lg:w-[23%] mt-[10px] h-[fit-content]  p-2 bg-white shadow-lg rounded-md">
+    <div className=" md:w-[30%] w-[92%] lg:w-[23%] mt-[10px] h-[fit-content] mx-auto lg:mx-0 md:mx-0  p-2 bg-white shadow-lg rounded-md">
       <div id="profile_pic_and_name" className=" w-[100%] p-3">
         {" "}
         <p className=" text-gray-600 font-semibold">Profile Details</p>
