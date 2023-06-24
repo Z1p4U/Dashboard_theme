@@ -198,7 +198,7 @@ const Form = () => {
             />
             <TextInput
               label="Address"
-              placeholder="Enter Owner Address"
+              placeholder="Enter Address"
               {...form.getInputProps("Address")}
             />
           </div>

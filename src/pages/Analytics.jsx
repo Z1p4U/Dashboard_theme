@@ -167,8 +167,8 @@ const Analytics = () => {
         <div className="grid grid-cols-7 gap-6 mb-6">
           <div className=" col-start-1 col-span-7 lg:col-start-1 lg:col-span-3 grid grid-rows-2 gap-6">
             <div className=" row-start-1 row-span-1 grid grid-cols-4 gap-6">
-              <div className=" col-start-1 col-span-2 lg:col-span-4 bg-[#e0eafc] h-[161px] xl:col-span-2 rounded shadow ">
-                <div className="grid grid-cols-2 h-[161px]">
+              <div className=" col-start-1 col-span-1 md:col-span-2 lg:col-span-4 bg-[#e0eafc] h-[161px] xl:col-span-2 rounded shadow ">
+                <div className="grid grid-cols-1  md:grid-cols-2 h-[161px]">
                   <div className=" col-start-1 col-span-1 m-1 p-4">
                     <p className=" text-blue-500 text-sm font-bold">
                       Welcome Back, Chris!
