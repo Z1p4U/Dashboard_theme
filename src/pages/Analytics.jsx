@@ -90,10 +90,10 @@ const Analytics = () => {
         {/* Title Path */}
 
         <div className=" flex justify-between mb-4 items-center align-middle">
-          <p className=" block text-[#495057] text-xs md:text-lg font-bold">
+          <p className="hidden sm:block text-[#495057] text-xs md:text-lg font-bold">
             Analytics
           </p>
-          <div className=" flex items-center gap-3">
+          <div className=" flex items-center align-middle gap-3">
             <Menu
               withArrow
               arrowPosition="center"
@@ -167,7 +167,7 @@ const Analytics = () => {
         <div className="grid grid-cols-7 gap-6 mb-6">
           <div className=" col-start-1 col-span-7 lg:col-start-1 lg:col-span-3 grid grid-rows-2 gap-6">
             <div className=" row-start-1 row-span-1 grid grid-cols-4 gap-6">
-              <div className=" col-start-1 col-span-2 lg:col-span-4 bg-[#e0eafc] h-[161px] xl:col-span-2 rounded shadow ">
+              <div className=" col-start-1 col-span-4 md:col-span-2 lg:col-span-4 bg-[#e0eafc] h-[161px] xl:col-span-2 rounded shadow ">
                 <div className="grid grid-cols-2 h-[161px]">
                   <div className=" col-start-1 col-span-1 m-1 p-4">
                     <p className=" text-blue-500 text-sm font-bold">
@@ -188,7 +188,7 @@ const Analytics = () => {
                 </div>
               </div>
 
-              <div className="block lg:hidden xl:block col-start-3 col-span-2 h-[161px] rounded shadow p-5">
+              <div className="block col-start-1 col-span-4  md:col-start-3 md:col-span-2 lg:hidden xl:block h-[161px] rounded shadow p-5">
                 <div className=" grid grid-cols-5">
                   <p className=" text-md font-semibold col-start-1 col-span-4">
                     Bounce
@@ -217,7 +217,7 @@ const Analytics = () => {
             </div>
 
             <div className=" row-start-2 row-span-1 grid grid-cols-4 gap-6">
-              <div className="col-start-1 col-span-2 lg:col-span-4 xl:col-span-2 h-[161px] rounded shadow p-5">
+              <div className="col-start-1 col-span-4 md:col-span-2 lg:col-span-4 xl:col-span-2 h-[161px] rounded shadow p-5">
                 <div className=" grid grid-cols-5">
                   <p className=" text-md font-semibold col-start-1 col-span-4">
                     Real-Time
@@ -244,7 +244,7 @@ const Analytics = () => {
                 </div>
               </div>
 
-              <div className="block lg:hidden xl:block col-start-3 col-span-2 h-[161px] rounded shadow p-5">
+              <div className="block col-start-1 col-span-4 lg:hidden xl:block md:col-start-3 md:col-span-2 h-[161px] rounded shadow p-5">
                 <div className=" grid grid-cols-5">
                   <p className=" text-md font-semibold col-start-1 col-span-4">
                     Visitors
@@ -817,7 +817,7 @@ const Analytics = () => {
               <SortableTable />
             </div>
 
-            <div className=" grid grid-cols-12">
+            <div className=" grid grid-cols-12 mb-3">
               <div className=" col-start-1 col-span-12 md:col-span-5 py-4 px-5 text-sm font-semibold text-[#6C757d]">
                 Showing 1 to 8 of 8 entries
               </div>
