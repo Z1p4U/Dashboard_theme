@@ -21,19 +21,8 @@ import { useEffect } from "react";
 const token = uuidv4();
 
 function SignUp(props) {
-
-  const notify =() => toast.success('Register successfuly!', {
-    position: "bottom-right",
-    autoClose: 1000,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
-    progress: undefined,
-    theme: "colored",
-    });
-
-    const notifyError =() => toast.error('Register Fail!', {
+  const notify = () =>
+    toast.success("Register successfuly!", {
       position: "bottom-right",
       autoClose: 1000,
       hideProgressBar: false,
@@ -42,9 +31,21 @@ function SignUp(props) {
       draggable: true,
       progress: undefined,
       theme: "colored",
-      });
+    });
 
-    const nav = useNavigate();
+  const notifyError = () =>
+    toast.error("Register Fail!", {
+      position: "bottom-right",
+      autoClose: 1000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+    });
+
+  const nav = useNavigate();
 
   const form = useForm({
     initialValues: {
@@ -63,19 +64,22 @@ function SignUp(props) {
     },
   });
 
-  const [register,{isLoading}] = useRegisterMutation();
+  const [register, { isLoading }] = useRegisterMutation();
 
   useEffect(() => {
-    Cookies.remove('token');
-  },[])
+    Cookies.remove("token");
+  }, []);
 
   return (
-    <div className=" w-full">
-
+    <div className=" w-full h-screen flex align-middle items-center justify-center flex-col">
       <div className=" w-full">
-      <img src={"/bg-reg.svg"} className=" w-full h-screen absolute top-0 left-0 -z-30" alt="" />
+        <img
+          src={"/bg-reg.svg"}
+          className=" w-full h-screen absolute top-0 left-0 -z-30"
+          alt=""
+        />
       </div>
-      
+
       <Paper
         className=" w-[300px] md:w-[400px] lg:w-[550px] bg-slate-50 shadow-none border-none mx-auto my-5"
         radius="md"
@@ -83,7 +87,11 @@ function SignUp(props) {
         withBorder
         {...props}
       >
-        <Text size="lg" weight={500} className=" text-2xl text-sky-400 font-bold">
+        <Text
+          size="lg"
+          weight={500}
+          className=" text-2xl text-sky-400 font-bold"
+        >
           Register Your Account
         </Text>
 
@@ -105,10 +113,9 @@ function SignUp(props) {
               if (data?.success) {
                 notify();
                 nav(`/signin`);
-              }else{
-                notifyError()
+              } else {
+                notifyError();
               }
-
             } catch (error) {
               console.log(error);
             }
@@ -181,13 +188,9 @@ function SignUp(props) {
 
           <Group position="apart" mt="xl">
             <Link to={"/signin"}>
-              <Anchor
-                component="button"
-                type="button"
-                color="dimmed"
-                size="xs"
-              >
-                Already have an account? <span className=" text-blue-500">Login</span>
+              <Anchor component="button" type="button" color="dimmed" size="xs">
+                Already have an account?{" "}
+                <span className=" text-blue-500">Login</span>
               </Anchor>
             </Link>
             <button
@@ -196,7 +199,10 @@ function SignUp(props) {
               type="submit"
               radius="xl"
             >
-              {isLoading && <img src={"/Infinity-1s-200px.svg"} className=" w-10 h-5" />} Register
+              {isLoading && (
+                <img src={"/Infinity-1s-200px.svg"} className=" w-10 h-5" />
+              )}{" "}
+              Register
             </button>
           </Group>
         </form>

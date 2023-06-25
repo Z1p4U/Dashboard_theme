@@ -58,14 +58,17 @@ const SignIn = () => {
   const [login, { isLoading }] = useLoginMutation();
 
   return (
-    <div className=" flex justify-center ">
+    <div className=" flex justify-center h-screen my-10 md:mb-0 items-center align-middle ">
       {" "}
       <div className="flex flex-col w-[80%] md:w-[80%] lg:w-[30%] h-[fit-content] gap-2">
-        {" "}
+        <div className=" flex justify-center flex-col align-middle items-center mt-4 md:mt-0">
+          <h2 className=" text-2xl font-semibold ">Welcome back!</h2>
+          <p>Sign in to your account to continue</p>
+        </div>
         <form
-          className="  bg-white shadow-lg  lg:mx-0 px-5 mt-10 lg:mt-5  py-14 rounded-xl"
+          className="  bg-white shadow-lg rounded-xl"
           onSubmit={form.onSubmit(async (values) => {
-            console.log(values);
+            // console.log(values);
             try {
               const { data } = await login(values);
               console.log(data);
@@ -82,7 +85,57 @@ const SignIn = () => {
             }
           })}
         >
-          <div className="flex flex-col gap-2 p-3">
+          <div className=" bg-white shadow-sm  px-5 py-5 flex flex-col gap-3 rounded-lg">
+            <TextInput
+              mt="sm"
+              label="Email"
+              className=""
+              placeholder="Enter your email"
+              description="Put your email in a box "
+              {...form.getInputProps("email")}
+            />
+            <PasswordInput
+              label="Password"
+              placeholder="Enter your password"
+              description="Put your password in a box correctly "
+              {...form.getInputProps("password")}
+            />
+            <div>
+              <a href="#" className=" text-blue-600 text-xs font-semibold">
+                Forgot your password?
+              </a>
+            </div>
+            <div className=" flex justify-start align-middle items-center">
+              <input type="checkbox" id="check" className=" me-2" />
+              <label htmlFor="check">Remember Me</label>
+            </div>
+
+            <button
+              disabled={isLoading}
+              className=" text-white p-2 bg-blue-500 text-center rounded flex justify-center w-full"
+            >
+              {isLoading && (
+                <img src={"/Infinity-1s-200px.svg"} className=" w-10 h-5" />
+              )}{" "}
+              Login
+            </button>
+          </div>
+
+          <div className="flex gap-2 justify-center items-center ">
+            <div className=" w-[40%]">
+              <hr className="" />
+            </div>
+            <div className="">
+              {" "}
+              <p className=" text-gray-400 text-[13px] font-semibold">OR</p>
+            </div>
+            <div className="w-[40%]">
+              {" "}
+              <hr />
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-2 p-5">
             <button
               className=" text-white gap-3
            bg-red-600 hover:bg-red-700 transition p-3 flex rounded-sm  text-[14px] font-semibold justify-center items-center w-[98%] cursor-pointer"
@@ -100,52 +153,6 @@ const SignIn = () => {
            bg-black p-3 flex rounded-sm   text-[14px] font-semibold justify-center items-center w-[98%] cursor-pointer"
             >
               <FaMicrosoft /> <span className=" ">Sign in with Microsoft</span>
-            </button>
-          </div>
-          <div className="flex gap-2 justify-center items-center ">
-            <div className=" w-[40%]">
-              <hr className="" />
-            </div>
-            <div className="">
-              {" "}
-              <p className=" text-gray-400 text-[13px] font-semibold">OR</p>
-            </div>
-            <div className="w-[40%]">
-              {" "}
-              <hr />
-            </div>
-          </div>
-
-          <div className=" bg-white shadow-sm  p-5 flex flex-col gap-3 rounded-lg">
-            <TextInput
-              mt="sm"
-              label="Email"
-              className=""
-              placeholder="Enter your email"
-              description="Put your email in a box "
-              {...form.getInputProps("email")}
-            />
-            <div className="">
-              {" "}
-              <PasswordInput
-                label="Password"
-                placeholder="Enter your password"
-                description="Put your password in a box correctly "
-                {...form.getInputProps("password")}
-              />
-              <a href="#" className=" text-blue-600 text-[13px] font-semibold">
-                Forgot your password?
-              </a>
-            </div>
-
-            <button
-              disabled={isLoading}
-              className=" text-white p-2 bg-blue-500 text-center rounded flex justify-center w-full mt-5"
-            >
-              {isLoading && (
-                <img src={"/Infinity-1s-200px.svg"} className=" w-10 h-5" />
-              )}{" "}
-              Login
             </button>
           </div>
         </form>
