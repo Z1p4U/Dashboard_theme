@@ -15,7 +15,7 @@ import {
   PieChart,
   Pie,
 } from "recharts";
-import { Button, Group, Table, Text, rem } from "@mantine/core";
+import { Button, Group, Menu, Table, Text, rem } from "@mantine/core";
 import { MdOutlineDateRange } from "react-icons/md";
 import { AiOutlineArrowDown } from "react-icons/ai";
 import { CiFilter } from "react-icons/ci";
@@ -26,6 +26,7 @@ import { FiShoppingBag } from "react-icons/fi";
 import { useSelector } from "react-redux";
 import { DatePicker } from "@mantine/dates";
 import { DataTable } from "mantine-datatable";
+import { FaChevronDown } from "react-icons/fa";
 
 const data = [
   {
@@ -303,7 +304,7 @@ const Dashboard = () => {
   return (
     <>
       <div className="  px-10 pt-5 pb-40 md:pb-32 bg-primaryLight w-full  overflow-x-hidden">
-        <div className=" flex justify-between items-center">
+        {/* <div className=" flex justify-between items-center">
           <p className=" block text-slate-600 text-xs md:text-lg h4 font-bold">
             Dashboard
           </p>
@@ -353,6 +354,80 @@ const Dashboard = () => {
               className=" text-white bg-blue-500"
             >
               <FiRefreshCcw size={30} />
+            </Button>
+          </div>
+        </div> */}
+
+        <div className=" flex justify-between my-4 items-center align-middle">
+          <p className="hidden sm:block text-[#495057] text-xs md:text-lg font-bold">
+            Dashboard
+          </p>
+          <div className=" flex items-center align-middle gap-3">
+            <Menu
+              withArrow
+              arrowPosition="center"
+              transitionProps={{ transition: "scale", duration: 500 }}
+              shadow="md"
+              width={200}
+            >
+              <Menu.Target>
+                <Button
+                  size="sm"
+                  variant="subtle"
+                  color="dark"
+                  className=" w-30 text-sm shadow rounded"
+                  leftIcon={<MdOutlineDateRange size={15} />}
+                  rightIcon={<FaChevronDown size={9} />}
+                >
+                  Today
+                </Button>
+              </Menu.Target>
+
+              <Menu.Dropdown>
+                <Menu.Label>Settings</Menu.Label>
+                <Menu.Item>Action</Menu.Item>
+                <Menu.Item>Another Action</Menu.Item>
+                <Menu.Item>Something else here</Menu.Item>
+
+                <Menu.Divider />
+
+                <Menu.Label>Separated link</Menu.Label>
+              </Menu.Dropdown>
+            </Menu>
+
+            <Button
+              styles={(theme) => ({
+                root: {
+                  backgroundColor: "#00acee",
+                  border: 0,
+                  width: rem(50),
+                  height: rem(32),
+                  "&:not([data-disabled])": theme.fn.hover({
+                    backgroundColor: theme.fn.darken("#00acee", 0.05),
+                  }),
+                },
+                fontWeight: "bold",
+              })}
+              className=" text-white bg-blue-500"
+            >
+              <CiFilter size={30} className=" font-bold " />
+            </Button>
+
+            <Button
+              styles={(theme) => ({
+                root: {
+                  backgroundColor: "#00acee",
+                  border: 0,
+                  width: rem(50),
+                  height: rem(32),
+                  "&:not([data-disabled])": theme.fn.hover({
+                    backgroundColor: theme.fn.darken("#00acee", 0.05),
+                  }),
+                },
+              })}
+              className=" text-white bg-blue-500"
+            >
+              <FiRefreshCcw size={30} className=" font-bold" />
             </Button>
           </div>
         </div>
