@@ -438,7 +438,7 @@ export function Navbar() {
               <Menu
                 withArrow
                 arrowPosition="center"
-                transitionProps={{ transition: "scale", duration: 500 }}
+                transitionProps={{ transition: "scale-y", duration: 500 }}
                 shadow="md"
                 width={350}
               >
@@ -556,7 +556,7 @@ export function Navbar() {
               <Menu
                 withArrow
                 arrowPosition="center"
-                transitionProps={{ transition: "scale", duration: 500 }}
+                transitionProps={{ transition: "scale-y", duration: 500 }}
                 shadow="md"
                 width={160}
               >
@@ -622,7 +622,7 @@ export function Navbar() {
               <Menu
                 withArrow
                 arrowPosition="center"
-                transitionProps={{ transition: "scale", duration: 500 }}
+                transitionProps={{ transition: "scale-y", duration: 500 }}
                 shadow="md"
                 width={200}
               >
