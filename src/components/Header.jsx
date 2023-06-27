@@ -288,7 +288,7 @@ export function Navbar() {
           </div>
 
           <div className=" col-start-6 col-span-7">
-            <div className=" flex align-middle items-center me-0 md:me-5 justify-end">
+            <div className=" flex align-middle items-center me-0 md:me-5 justify-end gap-0 sm:gap-2 md:gap-3 lg:gap-4 xl:gap-5">
               <Menu
                 withArrow
                 arrowPosition="center"
@@ -301,7 +301,7 @@ export function Navbar() {
                     size="xl"
                     variant="white"
                     color="dark"
-                    className=""
+                    style={{ padding: "0px" }}
                     compact
                   >
                     <div className=" relative cursor-pointer transition-all">
@@ -447,7 +447,7 @@ export function Navbar() {
                     size="xl"
                     variant="white"
                     color="dark"
-                    className=""
+                    style={{ padding: "0px" }}
                     compact
                   >
                     <MdOutlineNotificationsOff size={23} />
@@ -561,7 +561,13 @@ export function Navbar() {
                 width={160}
               >
                 <Menu.Target>
-                  <Button size="xl" variant="white" color="dark" compact>
+                  <Button
+                    size="xl"
+                    variant="white"
+                    color="dark"
+                    style={{ padding: "0px" }}
+                    compact
+                  >
                     <div className=" w-5 h-5 rounded-full overflow-hidden bg-cover bg-fixed">
                       <img
                         className=" h-full"
@@ -632,6 +638,7 @@ export function Navbar() {
                     variant="white"
                     color="dark"
                     className=" hidden sm:block"
+                    style={{ padding: "0px" }}
                     compact
                     leftIcon={
                       <div className=" w-10 h-10 rounded-full overflow-hidden bg-cover bg-fixed">
